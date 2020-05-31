@@ -163,6 +163,7 @@ h2 {
   line-height: 50px;
   letter-spacing: 5px;
   margin-top: 45px;
+  margin-left: 5px;
 }
 
 .belief-box {
@@ -205,17 +206,26 @@ h2 {
 
 footer {
   background-image: url(./img/bg.png);
-  text-align: center;
+  width: 1920px;
+  margin: 0 auto;
   padding: 120px 0;
+  border: 0.1px solid rgba(0, 0, 0, 0);
 }
 
-footer .copyright {
+footer .footer {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer .footer .copyright {
   margin-top: 70px;
 }
 
-footer .copyright p {
+footer .footer .copyright p {
   font-size: 12px;
   letter-spacing: 3.6px;
   margin-bottom: 14px;
+  margin-left: 3.6px;
 }
 /*# sourceMappingURL=style.css.map */

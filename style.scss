@@ -14,9 +14,6 @@ $gray_dark: #252525;
 $yellow: #f5bb28;
 
 // header
-header {
-    
-}
 .container{
     width: 1920px;
     height: 120px;
@@ -170,6 +167,7 @@ h2{
             line-height: 50px;
             letter-spacing: 5px;
             margin-top: 45px;
+            margin-left: 5px;
         }
     }
 }
@@ -219,16 +217,25 @@ h2{
 // footer
 footer{
     background-image: url(./img/bg.png);
-    text-align: center;
+    width: 1920px;
+    margin: 0 auto;   
     padding: 120px 0 ;
+    border: 0.1px solid rgba(0, 0, 0, 0);
 
-    .copyright{
-        margin-top: 70px;
-
-        p{
-            font-size: 12px;
-            letter-spacing: 3.6px;
-            margin-bottom: 14px;
+    .footer{
+        width: 1200px;
+        margin: 0 auto;   
+        text-align: center;
+    
+        .copyright{
+            margin-top: 70px;
+    
+            p{
+                font-size: 12px;
+                letter-spacing: 3.6px;
+                margin-bottom: 14px;
+                margin-left: 3.6px;
+            }
         }
     }
 
