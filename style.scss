@@ -86,6 +86,7 @@ h2{
     margin: 45px auto 60px;
     text-align: center;
     letter-spacing: 9.6px;
+    margin-left: 9.6px;
 }
 
 // #news 最新消息
@@ -115,6 +116,10 @@ h2{
             margin: 25px auto 0;
         }
         hr{
+            // 如果單純設border會有一個1px的黑點, 所以將border設為0, 用高度和背景色去撐開
+            border: 0px solid $gray;
+            background: #000;
+            height: 1px;
             width: 0;
             margin-bottom: 25px;
             transition: ease-in 0.5s;
@@ -127,11 +132,40 @@ h2{
             text-align: left;
             margin-bottom: 30px;
         }
+        
+        .news-img{
+            
+            // 因為img無法使用偽元素, 所以要給他一個div
+            // div元素預設都會有文字的間隙, 需要用fz0消掉
+            font-size: 0;
+            position: relative;
+
+            img{
+                width: 100%;
+            }
+
+            &::before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                opacity: 0;
+                z-index: 1;
+                // 使用偽元素要搭配定位使用
+                position: absolute;
+                transition: ease-in 0.5s;
+            }
+        }
+        
 
         &:hover{
             hr{
                 width: 100%;
             }
+
+            .news-img::before{
+                opacity: 0.5;
+            }            
         }
     }
 }
@@ -214,12 +248,27 @@ h2{
             letter-spacing: 6px;
             margin-bottom: 50px;
         }
+        a{
+            color: $gray-dark;
+            
+            .more{
+                display: inline-block;
+                border: 1px solid #000;
+                padding: 15px 65px;
+                transition: ease-in 0.2s;
+            }
 
-        .more{
-            display: inline-block;
-            border: 1px solid #000;
-            padding: 15px 65px;
+            &:hover{
+
+                .more{
+
+                    background-color: $gray-dark;
+                    color: #fff;
+                }
+            }
         }
+    
+
     }
 
 }
