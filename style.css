@@ -8,9 +8,48 @@
   list-style: none;
 }
 
+.container {
+  width: 1920px;
+  height: 120px;
+  position: fixed;
+}
+
+.header {
+  margin: 0 auto;
+  width: 1200px;
+  line-height: 120px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 204px 351px 398px 120px 110px;
+      grid-template-columns: 204px 351px 398px 120px 110px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.header nav a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.header .social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
 .banner {
   background-image: url(./img/banner.png);
-  height: 100vh;
+  width: 1920px;
+  height: 1280px;
   background-position: center;
   background-size: cover;
 }
