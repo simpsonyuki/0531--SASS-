@@ -7,4 +7,11 @@
   font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
   list-style: none;
 }
+
+.banner {
+  background-image: url(./img/banner.png);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
 /*# sourceMappingURL=style.css.map */
