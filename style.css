@@ -53,4 +53,12 @@
   background-position: center;
   background-size: cover;
 }
+
+.banner .banner-title {
+  z-index: 2;
+  background-image: url(./img/banner-title.png);
+  background-position: center;
+  height: 1280px;
+  background-repeat: no-repeat;
+}
 /*# sourceMappingURL=style.css.map */
