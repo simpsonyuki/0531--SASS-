@@ -7,6 +7,11 @@
     list-style: none;
 }
 
+$green: #49aa45;
+$gray_light: #333333;
+$gray_dark: #252525;
+
+
 // header
 header {
     
@@ -73,7 +78,8 @@ header {
 main{
     background-image: url(./img/bg.png);
     width: 1920px;
-    background-repeat: repeat;
+    // 給他一個邊框,讓底色塊不會因為 margin 被往下推
+    border: 0.1px solid rgba(0, 0, 0, 0);
 }
 
 h2{
@@ -81,13 +87,13 @@ h2{
     font-weight: 300;
     margin: 45px auto 60px;
     text-align: center;
-    letter-spacing: 10px;
+    letter-spacing: 9.6px;
 }
 
 // #news 最新消息
 .news-list{
     display: grid;
-    grid-template-columns: 380px 380px 380px;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     width: 1200px;
     margin: 0 auto;
@@ -100,24 +106,69 @@ h2{
         span{
             font-size: 12px;
             letter-spacing: 3.5px;
-            color: #49aa45;
+            color: $green;
             display: block;
         }
         h3{
             display: inline-block;
             font-size: 22px;
             font-weight: bold;
-            letter-spacing: 6.5px;
+            letter-spacing: 4px;
             margin: 25px auto 35px;
             border-bottom: 1px solid #000;
         }
         p{
+            color: $gray_light;
             font-size: 16px;
             font-weight: 300;
-            line-height: 1.8em;
-            letter-spacing: 4.8px;
+            line-height: 1.8;
             text-align: left;
             margin-bottom: 30px;
         }
     }
+}
+
+// #product 推薦飲品
+
+
+
+// #belief 經營理念
+.belief-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 1200px;
+    margin: 0 auto;
+
+    .belief-img{
+        background-color: #fff;
+        padding: 10px;
+        
+        img{
+            width: 100%;
+        }
+    }
+
+    .belief-txt{
+
+        h3{
+            font-size: 24px;
+            letter-spacing: 7px;
+            margin-bottom: 50px;
+        }
+
+        p{
+            font-size: 20px;
+            line-height: 50px;
+            letter-spacing: 6px;
+            margin-bottom: 50px;
+        }
+
+        .more{
+            display: inline-block;
+            border: 1px solid #000;
+            padding: 15px 65px;
+        }
+    }
+
 }
