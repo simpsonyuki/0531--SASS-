@@ -148,10 +148,11 @@ h2 {
 }
 
 .pro-box .pro-txt span {
+  display: block;
   text-align: center;
   color: #cccccc;
   font-size: 16px;
-  letter-spacing: 3.6px;
+  letter-spacing: 4.5px;
 }
 
 .pro-box .pro-txt p {
